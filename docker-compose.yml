@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: servernode
+    container_name: servernode
+    restart: unless-stopped
+    ports:
+      - "8080:3333"
